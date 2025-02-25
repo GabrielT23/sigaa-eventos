@@ -20,7 +20,7 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
         </label>
         <input
           {...register('name', { required: 'Campo obrigatório' })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
         />
         {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
       </div>
@@ -31,7 +31,7 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
         </label>
         <input
           {...register('responsible', { required: 'Campo obrigatório' })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
         />
         {errors.responsible && (
           <p className="text-red-500 text-sm mt-1">{errors.responsible.message}</p>
@@ -46,7 +46,7 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
           type="date"
           {...register('date', { required: 'Campo obrigatório' })}
           min={new Date().toISOString().split('T')[0]}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
         />
         {errors.date && <p className="text-red-500 text-sm mt-1">{errors.date.message}</p>}
       </div>
@@ -58,7 +58,7 @@ export default function ActivityForm({ onSubmit }: ActivityFormProps) {
         <textarea
           {...register('description')}
           rows={4}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+          className="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
         ></textarea>
       </div>
 
